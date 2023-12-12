@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scipt.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Protótipo Estoque Loja </h1>
+            <div id="formularioInicio">
+                <label for="qntEstoque" >Informe a quantidade de itens em estoque:</label>
+                <input type="number" min="0" name="qntEstoque" id="qntEstoque"> <br>
+                <button onclick="quantidadeEstoque()">Enviar</button>
+            </div>
+            <div id="formularioOperacao">
+                <p>Selecione a operação desejada:</p>
+
+                <input type="radio" name="operacao" id="compra" value="1" onclick="mostrarCompra()">
+                <label for="compra" >Compra</label>
+
+                <input type="radio" name="operacao" id="venda" value="2" onclick="mostrarVenda()">
+                <label for="venda" >Venda</label>
+                
+                <input type="radio" name="operacao" id="sair" value="3" onclick="sair()" checked>
+                <label for="sair">Sair/Finalizar</label><br>
+
+                    <div id="soma">
+                        <label for="compraEstoque">Informe a quantidade comprada a ser <strong>somada</strong> :</label>
+                        <input type="number" name="compraEstoque" id="compraEstoque" min="0">
+                    </div>
+                    <div id="subtracao">
+                        <label for="vendaEstoque">Informe a quantidade vendida a ser <strong>subtraida</strong> :</label>
+                        <input type="number" name="vendaEstoque" id="vendaEstoque" min="0">
+                    </div>
+
+                <button onclick="finalizaOperacao()">Enviar</button>
+
+                    <div id="formularioResultado">
+                        <p>A nova quantidade é: x</p>
+                    </div>
+            </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/OtavioMendesSantos" target="_blank" id="eu">@Otávio Mendes Santos</a></p>
+    </footer>
+
+</body>
+</html>
